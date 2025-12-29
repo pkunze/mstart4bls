@@ -26,7 +26,7 @@ if st.radio ("Spritzende Blutung vorhanden?", options=["Ja", "Nein"], index=None
     st.link_button("Neuer Patient", "/", use_container_width=True)
     st.stop()
 
-last_check = st.radio("Unfähig einfache Aufforderungen zu befolgen? (z.B. \"Folgen Sie mit den Augen meiner Handbewegung!\")", options=["Ja", "Nein"], index=None)
+last_check = st.radio("**Unfähig** einfache Aufforderungen zu befolgen? (Bspw. \"Folgen Sie mit den Augen meiner Handbewegung!\")", options=["Ja", "Nein"], index=None)
 if last_check == "Ja":
     st.error("Rot &rarr; Stabile Seitenlage")
     st.link_button("Neuer Patient", "/", use_container_width=True)

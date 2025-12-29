@@ -3,7 +3,7 @@ import streamlit as st
 st.subheader("mSTaRT Vorsichtung")
 
 if st.radio("Patient gefähig?", options=["Ja", "Nein"], index=None) == "Ja":
-    st.success("GRÜN &rarr; Patient zur Sammelstelle schicken.")
+    st.success("**GRÜN** &rarr; Patient zur Sammelstelle schicken.")
     st.link_button("Neuer Patient", "/", use_container_width=True)
     st.stop()
 
@@ -12,7 +12,7 @@ if st.radio("Atmung vorhanden?", options=["Ja", "Nein"], index=None) == "Nein":
 
     atmung_nach_freimachen = st.radio("Atmung nach Freimachen vorhanden?", options=["Ja", "Nein"], index=None)
     if atmung_nach_freimachen == "Nein":
-        st.warning("Schwarz &rarr; Weiter mit nächstem Patienten.")
+        st.info("**SCHWARZ** &rarr; Weiter mit nächstem Patienten.")
         st.link_button("Neuer Patient", "/", use_container_width=True)
         st.stop()
 

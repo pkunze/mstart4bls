@@ -12,33 +12,33 @@ if walking_answer == "Ja":
     st.link_button("Neuer Patient", "/", use_container_width=True)
     st.stop()
 
-breathing_answer = st.radio("Atmung vorhanden?", options=["Ja", "Nein"], index=None)
+breathing_answer = st.radio("Atmung vorhanden? (vor Prüfung ggfs. Kopf überstrecken, Atemwege freimachen)", options=["Ja", "Nein"], index=None)
 
 if breathing_answer is None:
     st.stop()
 
 if breathing_answer == "Nein":
-    st.markdown("**Atemwege freimachen, wenn nötig!**")
+    # st.markdown("**Atemwege freimachen, wenn nötig!**")
 
-    atmung_nach_freimachen = st.radio("Atmung nach Freimachen vorhanden?", options=["Ja", "Nein"], index=None)
+    # atmung_nach_freimachen = st.radio("Atmung nach Freimachen vorhanden?", options=["Ja", "Nein"], index=None)
     
-    if atmung_nach_freimachen is None:
-        st.stop()
+    # if atmung_nach_freimachen is None:
+    #     st.stop()
 
-    if atmung_nach_freimachen == "Nein":
+    # if atmung_nach_freimachen == "Nein":
         st.info("**SCHWARZ** &rarr; Weiter mit nächstem Patienten.")
         st.link_button("Neuer Patient", "/", use_container_width=True)
         st.stop()
 
-abnormal_breathing_frequency_answer = st.radio("**Abnormale** Atemfrequenz? (Mehr als 5 oder weniger als 2 Atemzüge innerhalb von 10 Sekunden)", options=["Ja", "Nein"], index=None)
+# abnormal_breathing_frequency_answer = st.radio("**Abnormale** Atemfrequenz? (Mehr als 5 oder weniger als 2 Atemzüge innerhalb von 10 Sekunden)", options=["Ja", "Nein"], index=None)
 
-if abnormal_breathing_frequency_answer is None:
-    st.stop()
+# if abnormal_breathing_frequency_answer is None:
+#     st.stop()
 
-if abnormal_breathing_frequency_answer == "Ja":
-    st.error("**ROT** &rarr; Stabile Seitenlage")
-    st.link_button("Neuer Patient", "/", use_container_width=True)
-    st.stop()
+# if abnormal_breathing_frequency_answer == "Ja":
+#     st.error("**ROT** &rarr; Stabile Seitenlage")
+#     st.link_button("Neuer Patient", "/", use_container_width=True)
+#     st.stop()
 
 bleeding_answer = st.radio ("Spritzende Blutung vorhanden?", options=["Ja", "Nein"], index=None)
 

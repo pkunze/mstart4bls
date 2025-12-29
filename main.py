@@ -16,7 +16,7 @@ if st.radio("Atmung vorhanden?", options=["Ja", "Nein"], index=None) == "Nein":
         st.link_button("Neuer Patient", "/", use_container_width=True)
         st.stop()
 
-if st.radio("Abnormale Atemfrequenz? (Mehr als 5 oder weniger als 2 Atemzüge innerhalb von 10 Sekunden)", options=["Ja", "Nein"], index=None) == "Ja":
+if st.radio("**Abnormale** Atemfrequenz? (Mehr als 5 oder weniger als 2 Atemzüge innerhalb von 10 Sekunden)", options=["Ja", "Nein"], index=None) == "Ja":
     st.error("**ROT** &rarr; Stabile Seitenlage")
     st.link_button("Neuer Patient", "/", use_container_width=True)
     st.stop()

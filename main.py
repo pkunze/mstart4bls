@@ -2,9 +2,8 @@ import streamlit as st
 
 st.subheader("mSTaRT Vorsichtung")
 
-tabs = st.tabs(["Dynamische Abfrage", "Statische Taschenkarte"])
-
-with tabs[0]:
+use_dynamic = st.toggle("Dynamische Abfrage verwenden", value=True)
+if use_dynamic:
     walking_answer = st.radio("Patient gehfähig?", options=["Ja", "Nein"], index=None)
 
     if walking_answer is None:
@@ -63,5 +62,5 @@ with tabs[0]:
         st.warning("**GELB**")
         st.link_button("Neuer Patient", "/", use_container_width=True)
 
-with tabs[1]:
-    st.image("taschenkarte.gif", use_container_width=True)
+else:
+    st.image("taschenkarte.gif", output_format="GIF", use_container_width=True)

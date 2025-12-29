@@ -2,7 +2,7 @@ import streamlit as st
 
 st.subheader("mSTaRT Vorsichtung")
 
-walking_answer = st.radio("Patient gefähig?", options=["Ja", "Nein"], index=None)
+walking_answer = st.radio("Patient gehfähig?", options=["Ja", "Nein"], index=None)
 
 if walking_answer is None:
     st.stop()

@@ -22,7 +22,7 @@ if st.radio("Abnormale Atemfrequenz? (Mehr als 5 oder weniger als 2 Atemzüge in
     st.stop()
 
 if st.radio ("Spritzende Blutung vorhanden?", options=["Ja", "Nein"], index=None) == "Ja":
-    st.error("Rot &rarr; ggfs. Stabile Seitenlage")
+    st.error("Rot &rarr; wenn schnell möglich Druckverband/Tourniquet anlegen, ggfs. Stabile Seitenlage")
     st.link_button("Neuer Patient", "/", use_container_width=True)
     st.stop()
 

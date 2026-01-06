@@ -4,7 +4,7 @@ st.subheader("mSTaRT Vorsichtung")
 
 use_dynamic = st.toggle("Dynamische Abfrage verwenden", value=True)
 if use_dynamic:
-    walking_answer = st.radio("Patient gehfähig?", options=["Ja", "Nein"], index=None)
+    walking_answer = st.radio("Patient **gehfähig**?", options=["Ja", "Nein"], index=None)
 
     if walking_answer is None:
         st.stop()
@@ -14,7 +14,7 @@ if use_dynamic:
         st.link_button("Neuer Patient", "/", use_container_width=True)
         st.stop()
 
-    breathing_answer = st.radio("Atmung vorhanden? (vor Prüfung ggfs. Kopf überstrecken, Atemwege freimachen)", options=["Ja", "Nein"], index=None)
+    breathing_answer = st.radio("**Atmung** vorhanden? (vor Prüfung ggfs. Kopf überstrecken, Atemwege freimachen)", options=["Ja", "Nein"], index=None)
 
     if breathing_answer is None:
         st.stop()
@@ -42,7 +42,7 @@ if use_dynamic:
     #     st.link_button("Neuer Patient", "/", use_container_width=True)
     #     st.stop()
 
-    bleeding_answer = st.radio ("Spritzende Blutung vorhanden?", options=["Ja", "Nein"], index=None)
+    bleeding_answer = st.radio ("**Spritzende Blutung** vorhanden?", options=["Ja", "Nein"], index=None)
 
     if bleeding_answer is None:
         st.stop()
@@ -52,7 +52,7 @@ if use_dynamic:
         st.link_button("Neuer Patient", "/", use_container_width=True)
         st.stop()
 
-    last_check = st.radio("Patient bewusstlos oder **Unfähig** einfache Aufforderungen zu befolgen? (Bspw. \"Folgen Sie mit den Augen meiner Handbewegung!\")", options=["Ja", "Nein"], index=None)
+    last_check = st.radio("Patient **bewusstlos** oder **unfähig** einfache Aufforderungen zu befolgen? (Bspw. \"Folgen Sie mit den Augen meiner Handbewegung!\")", options=["Ja", "Nein"], index=None)
     if last_check is None:
         st.stop()
     elif last_check == "Ja":

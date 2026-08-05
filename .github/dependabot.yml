@@ -1,0 +1,13 @@
+version: 2
+updates:
+  # Update pip dependencies (requirements.txt)
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "daily"
+
+  # Update Docker base images (FROM python:…)
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "daily"
